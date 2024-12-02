@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="downloadBtn">Download Prescription</button>
+        <button id="printBtn">Print Prescription</button>
+    </div>
+    
+    <script>
+        const downloadUrl = "http://localhost:3000/prescriptions/prescription-123.pdf";
+    
+        document.getElementById("downloadBtn").onclick = function () {
+            window.location.href = downloadUrl;
+        };
+    
+        document.getElementById("printBtn").onclick = function () {
+            const printWindow = window.open(downloadUrl, "_blank");
+            printWindow.onload = function () {
+                printWindow.print();
+            };
+        };
+    </script>
+</body>
+</html>

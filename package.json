@@ -1,0 +1,21 @@
+{
+  "name": "Hospital",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.8.2",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.16",
+    "puppeteer": "^23.8.0"
+  }
+}
